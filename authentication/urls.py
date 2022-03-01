@@ -1,14 +1,9 @@
-from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('/login', LoginView.as_view(
-        template_name='login.html',
-        redirect_authenticated_user=True),
-         name='login'),
-    path('/signup', LoginView.as_view(
-        template_name='login.html',
-        redirect_authenticated_user=True),
-         name='sign-up'),
-    path('logout/', LogoutView.as_view(), name='logout'),
+    path('', views.login_view, name='login'),
+    path('signup', views.signup_view, name='signup'),
+    path('dashboard', views.home_view, name='home'),
+    path('logout', views.logout_view, name='logout'),
 ]

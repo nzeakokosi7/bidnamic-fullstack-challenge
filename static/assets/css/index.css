@@ -1,0 +1,95 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+}
+
+.overlay:before {
+  background: rgba(0, 0, 0, 0.25);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.bg-default {
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-image: url("https://prium.github.io/falcon/v3.4.0/assets/img/generic/14.jpg");
+}
+
+.auth-card {
+  width: 60%;
+}
+
+.auth-section {
+  overflow-y: auto;
+}
+
+.auth-header {
+  color: #00Bcc8 !important;
+  font-size: 25px;
+}
+
+.btn-alt {
+  background-color: #00Bcc8 !important;
+  color: white;
+}
+
+.btn-alt:hover {
+  color: white;
+  outline: none;
+}
+.btn-alt:focus {
+  color: white;
+  outline: none;
+}
+
+.auth-btn {
+  background-color: #00Bcc8 !important;
+  color: white;
+  margin-top: 1.5rem;
+}
+
+
+.auth-btn:hover {
+  color: white;
+  outline: none;
+}
+
+.auth-option {
+  color: #00Bcc8;
+  text-decoration: none;
+}
+
+.auth-option:active {
+  color: #00Bcc8;
+}
+
+.auth-option:hover {
+  color: #00Bcc8;
+}
+
+
+.aside {
+  background-color: #000;
+  color: #00Bcc8;
+  height: 100vh;
+  padding: 2rem;
+}
+
+.main-nav {
+}
+
+@media screen and (max-width: 600px) {
+  .auth-card {
+    width: 100%;
+  }
+}
