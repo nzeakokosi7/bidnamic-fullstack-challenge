@@ -60,17 +60,17 @@
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Username</label>
                                     <input type="email" class="form-control" id="email"
-                                           name="username" placeholder="test@gmail.com">
+                                           name="username" required placeholder="test@gmail.com">
                                 </div>
                                 <div class="mb-3">
                                     <label for="password" class="form-label">Password</label>
-                                    <input type="password" name="password" class="form-control" id="password">
+                                    <input type="password" required name="password" class="form-control" id="password">
                                     <br/>
                                     <label><input type="checkbox" id="box" onclick ="reveal()"> Show Password</label>
 
                                 </div>
 
-                                <button type="submit" formnovalidate="formnovalidate" class="btn w-100 auth-btn">Login</button>
+                                <button type="submit" class="btn w-100 auth-btn">Login</button>
                                 <br/>
                                 {% if form.errors %}
                                     <div>{{form.errors}}</div>

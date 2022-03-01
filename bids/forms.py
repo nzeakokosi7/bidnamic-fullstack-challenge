@@ -6,7 +6,7 @@ from . import models
 class BidCreation(forms.ModelForm):
     class Meta:
         model = models.Bid
-        fields = "__all__"
+        exclude = ('bidder',)
 
         # this function will be used for the validation
 
@@ -19,10 +19,12 @@ class BidCreation(forms.ModelForm):
         telephone = self.cleaned_data.get('telephone')
         dob = self.cleaned_data.get('dob')
 
-        is_phone_valid = re.search("^[+\d]+[\d.\s()]*$", telephone)
-
-        if not is_phone_valid:
-            self._errors['telephone'] = self.error_class([
-                "Telephone must start with a plus sign with no other symbols"])
+        # if telephone:
+        #     is_phone_valid = re.search("^[+\d]+[\d.\s()]*$", telephone)
+        # print(self.cleaned_data)
+        #
+        # if not is_phone_valid:
+        #     self._errors['telephone'] = self.error_class([
+        #         "Telephone must start with a plus sign with no other symbols"])
 
         return self.cleaned_data

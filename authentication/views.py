@@ -4,10 +4,6 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 
 # Create your views here.
-def home_view(request):
-    return render(request, 'dashboard.html')
-
-
 def logout_view(request):
     logout(request)
     return redirect('login')
