@@ -25,7 +25,6 @@ def login_view(request):
     if request.user.is_authenticated:
         return redirect("home")
     form = AuthenticationForm(data=request.POST)
-    print(form.errors)
     if form.is_valid():
         username = form.cleaned_data.get('username')
         password = form.cleaned_data.get('password')
